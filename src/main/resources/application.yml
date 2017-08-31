@@ -1,0 +1,28 @@
+spring:
+  application:
+    name: webhooks
+
+server:
+  port: 8080
+  context-path: /webhooks
+
+stage: dev
+
+logging.level.: INFO
+
+
+privateDns: ops.example.com
+jenkinsUrl: https://jenkins.example.com
+jenkinsAPIToken: test
+jenkinsUser: automation
+githubToken: test
+githubUsername: test
+githubPersonalAccessToken: test
+
+s3HookInfoBucket: test-bucket
+repoName: test
+repoOwner: test
+
+emailNotificationFrom: test@example.com
+
+blackListDomain: "@example.com"
