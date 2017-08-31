@@ -1,6 +1,6 @@
-package webhooks.clients.github;
+package hooker.clients.github;
 
-import webhooks.ServiceInfo;
+import hooker.ServiceInfo;
 import lombok.Data;
 
 import java.util.*;

@@ -1,4 +1,4 @@
-package webhooks.clients.github;
+package hooker.clients.github;
 
 import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.JsonNode;

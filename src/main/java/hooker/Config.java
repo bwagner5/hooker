@@ -1,4 +1,4 @@
-package webhooks;
+package hooker;
 
 import lombok.Data;
 import org.springframework.beans.factory.annotation.Value;

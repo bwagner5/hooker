@@ -1,4 +1,4 @@
-package webhooks.clients.jenkins;
+package hooker.clients.jenkins;
 
 import lombok.Data;
 

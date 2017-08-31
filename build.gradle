@@ -1,6 +1,6 @@
 buildscript {
 	ext {
-		springBootVersion = '1.5.2.RELEASE'
+		springBootVersion = '1.5.6.RELEASE'
 	}
 	repositories {
 		mavenCentral()
@@ -19,7 +19,7 @@ sourceSets.main.java.srcDirs = []
 sourceSets.main.groovy.srcDirs = ["src/main/java", "src/main/groovy"]
 
 jar {
-	baseName = 'webhooks'
+	baseName = 'hooker'
 	version = '0.0.1-SNAPSHOT'
 }
 

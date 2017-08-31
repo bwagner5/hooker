@@ -1,4 +1,4 @@
-package webhooks;
+package hooker;
 
 import org.junit.Test;
 import org.junit.runner.RunWith;

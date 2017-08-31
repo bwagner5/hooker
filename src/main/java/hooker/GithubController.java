@@ -1,14 +1,14 @@
-package webhooks;
+package hooker;
 
 import com.amazonaws.services.s3.AmazonS3;
 import com.amazonaws.services.s3.AmazonS3ClientBuilder;
 import com.google.gson.Gson;
-import webhooks.clients.github.Commit;
-import webhooks.clients.github.GitHubClient;
-import webhooks.clients.github.GithubHook;
-import webhooks.clients.github.PullRequestHook;
-import webhooks.clients.jenkins.JenkinsClient;
-import webhooks.clients.jenkins.JenkinsJob;
+import hooker.clients.github.Commit;
+import hooker.clients.github.GitHubClient;
+import hooker.clients.github.GithubHook;
+import hooker.clients.github.PullRequestHook;
+import hooker.clients.jenkins.JenkinsClient;
+import hooker.clients.jenkins.JenkinsJob;
 import org.apache.commons.codec.digest.HmacUtils;
 import org.apache.commons.io.FileUtils;
 import org.slf4j.Logger;

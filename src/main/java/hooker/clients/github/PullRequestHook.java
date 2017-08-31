@@ -1,8 +1,6 @@
-package webhooks.clients.github;
+package hooker.clients.github;
 
 import lombok.Data;
-
-import java.util.List;
 
 @Data
 public class PullRequestHook {

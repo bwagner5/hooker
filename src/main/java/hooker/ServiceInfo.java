@@ -1,6 +1,6 @@
-package webhooks;
+package hooker;
 
-import webhooks.clients.github.Commit;
+import hooker.clients.github.Commit;
 import lombok.Data;
 import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;

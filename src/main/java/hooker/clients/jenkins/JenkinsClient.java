@@ -1,4 +1,4 @@
-package webhooks.clients.jenkins;
+package hooker.clients.jenkins;
 
 import com.google.gson.Gson;
 import com.google.gson.JsonParseException;

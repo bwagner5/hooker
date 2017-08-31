@@ -1,4 +1,4 @@
-package webhooks.clients.github;
+package hooker.clients.github;
 
 import lombok.Data;
 
