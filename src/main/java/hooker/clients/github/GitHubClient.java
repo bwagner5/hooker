@@ -4,10 +4,7 @@ import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.JsonNode;
 import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.http.exceptions.UnirestException;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 import org.json.JSONArray;
 import java.util.*;
 import java.util.concurrent.ConcurrentHashMap;
@@ -16,6 +13,7 @@ import java.util.logging.Logger;
 
 @EqualsAndHashCode
 @ToString(exclude = {"githubPersonalAccessToken", "githubUsername"})
+@Builder
 public class GitHubClient {
 
     private static final Logger LOGGER = Logger.getLogger( GitHubClient.class.getName() );

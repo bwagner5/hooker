@@ -33,20 +33,19 @@ public class GithubController {
 
     private final Gson gson = new Gson();
 
-    private final String awsS3HookInfoBucket;
-    private final String repoOwner;
-    private final String repoName;
-
-    private final Config config;
+    private final GitHubClient gitHubClient;
     private final JenkinsClient jenkinsClient;
 
+    private final String awsS3HookInfoBucket;
+
+    private final Config config;
+
     @Autowired
-    public GithubController(Config config){
+    public GithubController(GitHubClient gitHubClient, JenkinsClient jenkinsClient, Config config){
+        this.gitHubClient = gitHubClient;
+        this.jenkinsClient = jenkinsClient;
         this.config = config;
-        this.jenkinsClient = new JenkinsClient(config.getJenkinsUrl(), config.getJenkinsUser(), config.getJenkinAPIToken(), config.getGithubToken());
         this.awsS3HookInfoBucket = config.getS3HookInfoBucket();
-        this.repoOwner = config.getRepoOwner();
-        this.repoName = config.getRepoName();
     }
 
     @RequestMapping(method= RequestMethod.POST)
@@ -121,8 +120,6 @@ public class GithubController {
         if(action.equalsIgnoreCase("opened") || action.equalsIgnoreCase("synchronize")){
 
             PullRequestHook pullRequestHook = gson.fromJson(body, PullRequestHook.class);
-
-            GitHubClient gitHubClient = new GitHubClient(this.config.getGithubUsername(), this.config.getGithubPersonalAccessToken(), this.repoOwner, this.repoName);
 
             Set<String> fileChanges = gitHubClient.retrievePullRequestFileChanges(pullRequestHook.getNumber());
 

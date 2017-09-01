@@ -3,7 +3,7 @@ spring:
     name: hooker
 
 server:
-  port: 8080
+  port: 8090
   context-path: /hooker
 
 stage: dev
@@ -11,10 +11,10 @@ stage: dev
 logging.level.: INFO
 
 
-privateDns: ops.example.com
-jenkinsUrl: https://jenkins.example.com
+privateDns: localhost
+jenkinsUrl: http://localhost:8080
 jenkinsAPIToken: test
-jenkinsUser: automation
+jenkinsUser: test
 githubToken: test
 githubUsername: test
 githubPersonalAccessToken: test

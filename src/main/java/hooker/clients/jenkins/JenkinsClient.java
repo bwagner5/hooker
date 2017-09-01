@@ -5,10 +5,7 @@ import com.google.gson.JsonParseException;
 import com.mashape.unirest.http.HttpResponse;
 import com.mashape.unirest.http.Unirest;
 import com.mashape.unirest.http.exceptions.UnirestException;
-import lombok.EqualsAndHashCode;
-import lombok.Getter;
-import lombok.Setter;
-import lombok.ToString;
+import lombok.*;
 
 import java.io.UnsupportedEncodingException;
 import java.net.URLEncoder;
@@ -17,6 +14,7 @@ import java.util.logging.Logger;
 
 @EqualsAndHashCode
 @ToString(exclude = {"apiToken", "githubToken"})
+@Builder
 public class JenkinsClient {
 
     private static final Logger LOGGER = Logger.getLogger( JenkinsClient.class.getName() );
